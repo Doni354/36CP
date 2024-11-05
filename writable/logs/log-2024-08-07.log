@@ -1,0 +1,401 @@
+INFO - 2024-08-07 01:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-07 01:38:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-08-07 01:38:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 01:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-07 01:38:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-08-07 01:38:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 01:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-07 01:38:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-08-07 01:38:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(28): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 01:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 01:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 01:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 01:40:34 --> CSRF token verified.
+INFO - 2024-08-07 01:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 01:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 01:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:38:48 --> CSRF token verified.
+INFO - 2024-08-07 02:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 02:43:13 --> Attempt to read property "id_aktivitas" on null
+in APPPATH\Views\admin\aktivitas\edit.php on line 11.
+ 1 APPPATH\Views\admin\aktivitas\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_aktivitas" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/aktivitas/edit', [], true)
+ 5 APPPATH\Controllers\admin\Aktivitas.php(102): view('admin/aktivitas/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 02:43:27 --> CSRF token verified.
+CRITICAL - 2024-08-07 09:43:27 --> unlink(asset-user/images/img_sq_3.jpg): No such file or directory
+in APPPATH\Controllers\admin\Aktivitas.php on line 138.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset-user/images/img_sq_3.jpg): No such file or directory', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Controllers\\admin\\Aktivitas.php', 138)
+ 2 APPPATH\Controllers\admin\Aktivitas.php(138): unlink('asset-user/images/img_sq_3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->proses_edit('2')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 02:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 02:43:35 --> Attempt to read property "id_aktivitas" on null
+in APPPATH\Views\admin\aktivitas\edit.php on line 11.
+ 1 APPPATH\Views\admin\aktivitas\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_aktivitas" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/aktivitas/edit', [], true)
+ 5 APPPATH\Controllers\admin\Aktivitas.php(102): view('admin/aktivitas/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 02:43:38 --> CSRF token verified.
+CRITICAL - 2024-08-07 09:43:38 --> unlink(asset-user/images/img_sq_3.jpg): No such file or directory
+in APPPATH\Controllers\admin\Aktivitas.php on line 138.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset-user/images/img_sq_3.jpg): No such file or directory', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Controllers\\admin\\Aktivitas.php', 138)
+ 2 APPPATH\Controllers\admin\Aktivitas.php(138): unlink('asset-user/images/img_sq_3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->proses_edit('2')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 02:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 02:44:47 --> Attempt to read property "id_aktivitas" on null
+in APPPATH\Views\admin\aktivitas\edit.php on line 11.
+ 1 APPPATH\Views\admin\aktivitas\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_aktivitas" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/aktivitas/edit', [], true)
+ 5 APPPATH\Controllers\admin\Aktivitas.php(102): view('admin/aktivitas/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 02:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 02:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:00:31 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:01:04 --> CSRF token verified.
+INFO - 2024-08-07 03:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:04:47 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:05:00 --> CSRF token verified.
+INFO - 2024-08-07 03:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:05:10 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:05:45 --> CSRF token verified.
+INFO - 2024-08-07 03:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:05:55 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:06:55 --> CSRF token verified.
+INFO - 2024-08-07 03:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:07:05 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:07:45 --> CSRF token verified.
+INFO - 2024-08-07 03:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:08:00 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:08:44 --> CSRF token verified.
+INFO - 2024-08-07 03:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:08:55 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:09:00 --> CSRF token verified.
+INFO - 2024-08-07 03:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:09:09 --> Attempt to read property "id_artikel" on null
+in APPPATH\Views\admin\artikel\edit.php on line 17.
+ 1 APPPATH\Views\admin\artikel\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_artikel" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\artikel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/artikel/edit', [], true)
+ 5 APPPATH\Controllers\admin\Artikel.php(96): view('admin/artikel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Artikel->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:09:14 --> CSRF token verified.
+INFO - 2024-08-07 03:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-07 03:36:03 --> Attempt to read property "id_aktivitas" on null
+in APPPATH\Views\admin\aktivitas\edit.php on line 11.
+ 1 APPPATH\Views\admin\aktivitas\edit.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_aktivitas" on null', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Views\\admin\\aktivitas\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/aktivitas/edit', [], true)
+ 5 APPPATH\Controllers\admin\Aktivitas.php(102): view('admin/aktivitas/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->edit('favicon.ico')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:36:16 --> CSRF token verified.
+CRITICAL - 2024-08-07 10:36:16 --> unlink(asset-user/images/img_sq_3.jpg): No such file or directory
+in APPPATH\Controllers\admin\Aktivitas.php on line 138.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset-user/images/img_sq_3.jpg): No such file or directory', 'D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\app\\Controllers\\admin\\Aktivitas.php', 138)
+ 2 APPPATH\Controllers\admin\Aktivitas.php(138): unlink('asset-user/images/img_sq_3.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\admin\Aktivitas->proses_edit('2')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Aktivitas))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-08-07 03:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 03:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 04:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 06:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 07:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 07:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-07 07:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

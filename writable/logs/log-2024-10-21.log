@@ -1,0 +1,179 @@
+INFO - 2024-10-21 07:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-21 07:59:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-10-21 07:59:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-10-21 07:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-21 07:59:14 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-10-21 07:59:14 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-10-21 07:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-21 07:59:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#6 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\company profile\dkcraft.kadinkotamalang.com\dkcraft.kadinkotamalang.com\36\system\Commands\Server\rewrite.php(47): require_once('D:\\company prof...')
+#11 {main}
+CRITICAL - 2024-10-21 07:59:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\company profile\\dkcraft.kadinkotamalang.com\\dkcraft.kadinkotamalang.com\\36\\public\\index.php')
+INFO - 2024-10-21 08:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:53 --> CSRF token verified.
+INFO - 2024-10-21 08:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:02:00 --> CSRF token verified.
+INFO - 2024-10-21 08:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:10 --> CSRF token verified.
+INFO - 2024-10-21 08:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:19 --> CSRF token verified.
+INFO - 2024-10-21 08:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:25 --> CSRF token verified.
+INFO - 2024-10-21 08:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:21 --> CSRF token verified.
+INFO - 2024-10-21 08:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:08:22 --> CSRF token verified.
+INFO - 2024-10-21 08:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 08:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
