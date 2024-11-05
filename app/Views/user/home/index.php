@@ -283,7 +283,7 @@ $latestProducts = array_slice($tbproduk, 0, 5);
                 <div class="col-lg-4 col-md-6">
                     <div class="single_trip">
                         <div class="thumb">
-                            <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>">
+                        <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'service' : 'layanan') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>">
                                 <img src="./asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                     echo $produk->nama_produk_en;
                                 } ?>
@@ -293,7 +293,7 @@ $latestProducts = array_slice($tbproduk, 0, 5);
                             </a>
                         </div>
                         <div class="info button">
-                            <a href="#">
+                        <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'service' : 'layanan') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>">
                                 <h3><?php if (lang('Blog.Languange') == 'en') {
                                     echo $produk->nama_produk_en;
                                 } ?>
