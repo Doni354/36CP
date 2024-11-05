@@ -30,7 +30,7 @@
                     <div class="single_trip">
                         <div class="thumb">
                         <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>">
-                                <img data-src="./asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
+                                <img data-src="/asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                     echo $produk->nama_produk_en;
                                 } ?>
                                 <?php if (lang('Blog.Languange') == 'in') {
