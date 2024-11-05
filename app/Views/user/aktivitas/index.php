@@ -31,7 +31,7 @@
                     <div class="single_trip">
                         <div class="thumb">
                         <a href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>" class="img-link">
-                            <img data-src="./asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
+                            <img data-src="/asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                             echo $aktivitas->nama_aktivitas_en;
                                                                                                         } ?>
                                     <?php if (lang('Blog.Languange') == 'in') {
