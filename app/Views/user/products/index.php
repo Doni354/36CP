@@ -13,7 +13,7 @@
                         } ?></h3>
                         <?php endforeach; ?>
                         <p class="text-white text-center">
-                        <a href="<?= base_url('user/home') ?>"><?php echo lang('Blog.headerHome'); ?></a>
+                        <a href="<?= base_url($locale . '') ?>"><?= lang('Blog.Blog.headerHome'); ?></a>
                         <span class="mx-2">/</span>
                         <span><?php echo lang('Blog.headerProducts');  ?></span></p>
                     </div>
@@ -29,7 +29,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_trip">
                         <div class="thumb">
-                        <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>">
+                        <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'service' : 'layanan') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="card-link">
                                 <img data-src="/asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                     echo $produk->nama_produk_en;
                                 } ?>
