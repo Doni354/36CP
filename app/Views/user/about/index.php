@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img data-src="./asset-user/images/<?= $descper->foto_utama; ?>" alt="Logo Utama" class="img-fluid img-overlap lazyload">
+                        <img data-src="/asset-user/images/<?= $descper->foto_utama; ?>" alt="Logo Utama" class="img-fluid img-overlap lazyload">
                     </div>
                     <div class="col-lg-6 ml-auto">
                         <h3 class="section-subtitle text-white opacity-50"><?php echo lang('Blog.titleAboutUs')  ?></h3>
