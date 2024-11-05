@@ -1,105 +1,112 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>
+    <?=
+      session()->get('lang') === 'id'
+      ? ($tbproduk->meta_title_id ?? $tbaktivitas->meta_title_id ?? $artikel->meta_title_id ?? $meta['meta_title_id'] ?? 'Judul Standar Bahasa Indonesia')
+      : ($tbproduk->meta_title_en ?? $tbaktivitas->meta_title_en ?? $artikel->meta_title_en ?? $meta['meta_title_en'] ?? 'Default English Title');
+    ?>
+  </title>
+
+  <!-- Meta Tags -->
+  <meta name="title" content="<?= 
+        session()->get('lang') === 'id' 
+        ? ($tbproduk->meta_title_id ?? $tbaktivitas->meta_title_id ?? $artikel->meta_title_id ?? $meta['meta_title_id'] ?? 'Judul Standar Bahasa Indonesia') 
+        : ($tbproduk->meta_title_en ?? $tbaktivitas->meta_title_en ?? $artikel->meta_title_en ?? $meta['meta_title_en'] ?? 'Default English Title'); 
+    ?>">
+  <meta name="description" content="<?= 
+        session()->get('lang') === 'id' 
+        ? ($tbproduk->meta_description_id ?? $tbaktivitas->meta_description_id ?? $artikel->meta_description_id ?? $meta['meta_description_id'] ?? 'Deskripsi Standar Bahasa Indonesia') 
+        : ($tbproduk->meta_description_en ?? $tbaktivitas->meta_description_en ?? $artikel->meta_description_en ?? $meta['meta_description_en'] ?? 'Default English Description'); 
+  ?>">
+
+    <!-- Favicon -->
     <?php foreach ($profil as $perusahaan) : ?>
         <link rel="shortcut icon" href="<?= base_url('asset-user/images/') ?><?= $perusahaan->favicon_website ?>">
     <?php endforeach; ?>
-    <title>
-        <?php echo $Title; ?> | <?php foreach ($profil as $descper) : ?><?= $descper->nama_perusahaan; ?><?php endforeach; ?>
-    </title>    
-    <meta name="description" content="<?php echo $Meta; ?>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/magnific-popup.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/themify-icons.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/nice-select.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/flaticon.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/gijgo.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/animate.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/slick.css">
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/slicknav.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?= base_url('asset-user') ?>/css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <!-- Libraries Stylesheet -->
+    <link href="<?= base_url('asset-user') ?>/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url('asset-user') ?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?= base_url('asset-user') ?>/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="<?= base_url('asset-user') ?>/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- header-start -->
+    <!-- Header -->
     <?= $this->include('user/layout/header'); ?>
-    <!-- header-end -->
 
-    <!-- slider_area_start -->
+    <!-- Navbar -->
+    <?= $this->include('user/layout/nav'); ?>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- render halaman konten -->
     <?= $this->renderSection('content'); ?>
-    <!-- slider_area_end -->
 
+    <!-- Footer -->
+    <?= $this->include('user/layout/footer'); ?>
 
-  <!-- footer -->
-  <?= $this->include('user/layout/footer');  ?>
+    <!-- WhatsApp Icon -->
+    <?php foreach ($profil as $iconwa) : ?>
+        <a class="whats-app" href="<?= $iconwa->link_whatsapp ?>" target="_blank" style="position: fixed; bottom: 30px; right: 10px; z-index: 1000; transition: transform 0.3s ease-in-out;">
+            <img data-src="<?= base_url('asset-user/images/iconwa.png'); ?>" alt="WhatsApp" class="my-float lazyload" style="width: 80px; height: auto; padding: 10px;">
+        </a>
+    <?php endforeach; ?>
 
-  
-<!--     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+    <style>
+        .whats-app:hover {
+            transform: scale(1.1);
+        }
+    </style>
 
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script> -->
-    <!-- JS here -->
-    <script src="<?= base_url('asset-user') ?>/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/lib/wow/wow.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/lib/easing/easing.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/lib/waypoints/waypoints.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery-3.3.1.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery-ui.js"></script>
     <script src="<?= base_url('asset-user') ?>/js/popper.min.js"></script>
     <script src="<?= base_url('asset-user') ?>/js/bootstrap.min.js"></script>
     <script src="<?= base_url('asset-user') ?>/js/owl.carousel.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/isotope.pkgd.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/ajax-form.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/waypoints.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.counterup.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/imagesloaded.pkgd.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/scrollIt.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.scrollUp.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/wow.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/nice-select.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.slicknav.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.magnific-popup.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/plugins.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/gijgo.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/slick.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.stellar.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.countdown.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/bootstrap-datepicker.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.easing.1.3.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/aos.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.fancybox.min.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.sticky.js"></script>
+    <script src="<?= base_url('asset-user') ?>/js/jquery.mb.YTPlayer.min.js"></script>
     <script src="<?= base_url('asset-user') ?>/js/lazysizes.min.js"></script>
 
-   
-
-    
-    <!--contact js-->
-    <script src="<?= base_url('asset-user') ?>/js/contact.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.ajaxchimp.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.form.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/jquery.validate.min.js"></script>
-    <script src="<?= base_url('asset-user') ?>/js/mail-script.js"></script>
-
-
+    <!-- Template Javascript -->
     <script src="<?= base_url('asset-user') ?>/js/main.js"></script>
-    <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-        });
-    </script>
 </body>
 
 </html>

@@ -11,7 +11,6 @@
 
     <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- FontAwesome JS-->
     <script defer src="<?= base_url('assets/plugins/fontawesome/js/all.min.js') ?>"></script>
@@ -72,7 +71,6 @@
                 (currentUrl.indexOf("slider") !== -1 && linkHref.indexOf("slider") !== -1) ||
                 (currentUrl.indexOf("aktivitas") !== -1 && linkHref.indexOf("aktivitas") !== -1) ||
                 (currentUrl.indexOf("profil") !== -1 && linkHref.indexOf("profil") !== -1)
-                (currentUrl.indexOf("artikel") !== -1 && linkHref.indexOf("artikel") !== -1)
             ) {
                 link.classList.add("active");
             }

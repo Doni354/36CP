@@ -1,4 +1,4 @@
-~<?= $this->extend('admin/template/template'); ?>
+<?= $this->extend('admin/template/template'); ?>
 <?= $this->Section('content'); ?>
 
 <div class="app-content pt-3 p-md-3 p-lg-4">
