@@ -116,44 +116,61 @@ $indonesia_url = ($lang_segment === 'id') ? current_url() : base_url('id' . ($ur
 
 <style>
     .logo-img {
-        max-height: 70px;
-        height: auto;
-        max-width: 100%;
+    max-height: 60px;
+    height: auto;
+    max-width: 100%;
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+}
+
+.navbar-toggler {
+    margin-top: 10px;
+}
+
+/* Navbar spacing for larger screens */
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Navbar spacing for smaller screens */
+@media (max-width: 991px) {
+    .logo-img {
+        max-height: 50px;
     }
 
     .navbar-nav .nav-link {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding: 10px;
-    }
-
-    .navbar-toggler {
         margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-height: 60px;
+        margin-top: 0;
     }
 
-    /* Adjust dropdown menu for smaller screens */
-    .dropdown-menu {
-        position: absolute;
-        z-index: 9999;
+    /* Align items with space between for smaller screens */
+    .navbar {
+        justify-content: space-between;
     }
-
-    /* Media queries for responsiveness */
-    @media (max-width: 991px) {
-        .logo-img {
-            max-height: 50px;
-        }
-
-        .navbar-nav .nav-link {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
+    .navbar-collapse {
+        justify-content: center;
     }
+}
 
-    @media (max-width: 768px) {
-        .logo-img {
-            max-height: 60px;
-            margin-top: 0;
-        }
-    }
 </style>
