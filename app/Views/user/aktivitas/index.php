@@ -13,7 +13,7 @@
                         } ?></h3>
                         <?php endforeach; ?>
                         <p class="text-white text-center">
-                        <a href="<?= base_url('/') ?>"><?php echo lang('Blog.headerHome'); ?></a>
+                        <a href="<?= base_url($locale . '') ?>"><?= lang('Blog.Blog.headerHome'); ?></a>
                         <span class="mx-2">/</span>
                         <span><?php echo lang('Blog.headerActivities');  ?></span></p>
                     </div>
@@ -30,7 +30,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_trip">
                         <div class="thumb">
-                        <a href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>" class="img-link">
+                        <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'activities' : 'aktivitas') . '/' . (($locale === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>">
                             <img data-src="/asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                             echo $aktivitas->nama_aktivitas_en;
                                                                                                         } ?>
@@ -41,13 +41,9 @@
                         </div>
                         <div class="info">
                                 <h3>
-                                <a href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>">
-                                    <?php if (lang('Blog.Languange') == 'en') {
-                                        echo $aktivitas->nama_aktivitas_en;
-                                    } ?>
-                                    <?php if (lang('Blog.Languange') == 'in') {
-                                        echo $aktivitas->nama_aktivitas_in;
-                                    } ?>
+                                <a href="<?= base_url($locale . '/activities/' . ((session('lang') === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>">
+                                    <?= (session('lang') === 'en') ? $aktivitas->nama_aktivitas_en : $aktivitas->nama_aktivitas_in; ?>
+
                                 </a>
                                 </h3>
                             </a>
