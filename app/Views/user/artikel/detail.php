@@ -66,10 +66,14 @@
                     <img class="img-fluid w-100" src="<?= base_url('asset-user/images/' . $artikel->foto_artikel); ?>" style="object-fit: cover;">
                     <div class="bg-white border border-top-0 p-4">
                         <div class="mb-3">
-                            <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></a>
+                            <p class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></p>
                         </div>
-                        <h1 class="display-5 mb-2 article-title"><?= $artikel->judul_artikel; ?></h1>
-                        <p class="fs-5"><?= $artikel->deskripsi_artikel; ?></p>
+                        <h1 class="display-5 mb-2 article-title"><?= $locale === 'id' ? strip_tags($artikel->judul_artikel) : strip_tags($artikel->judul_artikel_en) ?></h1>
+                        <p class="fs-5"><?php if (lang('Blog.Languange') == 'en') {
+                                echo $artikel->deskripsi_artikel_en;
+                            } else {
+                                echo $artikel->deskripsi_artikel;
+                            } ?></p>
                     </div>
                 </div>
                 <!-- News Detail End -->
@@ -79,18 +83,18 @@
     <!-- Popular News Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Baca Juga</h5>
+            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary"><?php echo lang('Blog.alsoRead');?></h5>
         </div>
         <br>
         <div class="bg-white border border-top-0 p-3">
             <?php foreach ($artikel_lain as $artikel_item) : ?>
                 <div class="d-flex align-items-center bg-white mb-3 article-item">
-                    <img class="img-fluid article-image" src="<?= base_url('asset-user/images/' . $artikel_item->foto_artikel); ?>" alt="">
+                    <img class="img-fluid article-image" src="<?= base_url('asset-user/images/' . $artikel_item->foto_artikel); ?>" alt="<?= base_url('asset-user/images/' . $artikel_item->foto_artikel); ?>">
                     <div class="w-100 h-100 d-flex flex-column justify-content-center border border-left-0 article-content">
                         <div class="mb-2">
-                            <a class="text-body" href="<?= base_url('/artikel/detail/' . $artikel_item->id_artikel) ?>"><small><?= date('d F Y', strtotime($artikel_item->created_at)); ?></small></a>
+                            <a class="text-body" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><small><?= date('d F Y', strtotime($artikel_item->created_at)); ?></small></a>
                         </div>
-                        <a class="h6 m-0 display-7" href="<?= base_url('/artikel/detail/' . $artikel_item->id_artikel) ?>"><?= substr($artikel_item->judul_artikel, 0, 20) ?>...</a>
+                        <a class="h6 m-0 display-7" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'articles' : 'artikel') . '/' . ($locale === 'id' ? $artikel_item->slug_in : $artikel_item->slug_en)) ?>"><?= session('lang') === 'id' ? strip_tags($artikel_item->judul_artikel) : strip_tags($artikel_item->judul_artikel_en) ?></a>
                     </div>
                 </div>
             <?php endforeach; ?>
