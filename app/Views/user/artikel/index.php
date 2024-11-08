@@ -39,14 +39,14 @@
             <?php foreach ($artikelterbaru as $row) : ?>
                 <div class="col-lg-4 mb-4">
                     <div class="position-relative d-flex flex-column h-100 mb-3">
-                        <a href="<?= base_url('/artikel/detail/' . $row->id_artikel) ?>">
+                        <a href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>">
                             <img class="img-fluid w-100" style="object-fit: cover;" src="<?= base_url('asset-user') ?>/images/<?= $row->foto_artikel; ?>" loading="lazy">
                         </a>
                         <div class="bg-white border border-top-0 p-4 flex-grow-1">
                             <div class="mb-2">
                                 <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($row->created_at)); ?></a>
                             </div>
-                            <a class="h4 display-5" href="<?= base_url('/artikel/detail/' . $row->id_artikel) ?>">
+                            <a class="h4 display-5" href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>">
     <?= strip_tags($row->judul_artikel) ?>
 </a>
                              <p><?= substr(strip_tags($row->deskripsi_artikel), 0, 30) ?>...</p>
