@@ -47,9 +47,9 @@
                                 <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($row->created_at)); ?></a>
                             </div>
                             <a class="h4 display-5" href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>">
-    <?= strip_tags($row->judul_artikel) ?>
+                            <?= session('lang') === 'id' ? strip_tags($row->judul_artikel) : strip_tags($row->judul_artikel_en); ?>
 </a>
-                             <p><?= substr(strip_tags($row->deskripsi_artikel), 0, 30) ?>...</p>
+                             <p><?= substr(strip_tags(session('lang') === 'id' ? $row->deskripsi_artikel : $row->deskripsi_artikel_en), 0, 30) ?>...</p>
                         </div>
                     </div>
                 </div>
