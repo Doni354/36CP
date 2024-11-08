@@ -41,7 +41,7 @@
                         </div>
                         <div class="info">
                                 <h3>
-                                <a href="<?= base_url($locale . '/activities/' . ((session('lang') === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>">
+                                <a href="<?= base_url($locale . '/' . ($locale === 'en' ? 'activities' : 'aktivitas') . '/' . (($locale === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>">
                                     <?= (session('lang') === 'en') ? $aktivitas->nama_aktivitas_en : $aktivitas->nama_aktivitas_in; ?>
 
                                 </a>

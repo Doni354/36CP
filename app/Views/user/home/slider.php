@@ -3,16 +3,16 @@
             <div class="carousel-inner">
                 <?php foreach ($tbslider as $key => $slider) : ?>
                     <div class="carousel-item <?php echo ($key == 0) ? 'active' : ''; ?>">
-                    <img class="w-100 lazyload" data-src="asset-user/images/<?= $slider->file_foto_slider; ?>" alt="Image">
+                    <img class="w-100 lazyload" data-src="asset-user/images/<?= $slider->file_foto_slider; ?>" alt="<?= $slider->file_foto_slider; ?>d">
                     </div>
                 <?php endforeach; ?>
             </div>
-            <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev" alt="prev">
                 <div class="btn btn-brown" style="width: 45px; height: 45px;">
                     <span class="carousel-control-prev-icon mb-n2" aria-hidden="true"></span>
                 </div>
             </a>
-            <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next" alt="next">
                 <div class="btn btn-brown" style="width: 45px; height: 45px;">
                     <span class="carousel-control-next-icon mb-n2" aria-hidden="true"></span>
                 </div>

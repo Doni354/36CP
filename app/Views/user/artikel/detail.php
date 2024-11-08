@@ -63,7 +63,7 @@
             <div class="col-lg-8">
                 <!-- News Detail Start -->
                 <div class="position-relative mb-3">
-                    <img class="img-fluid w-100" src="<?= base_url('asset-user/images/' . $artikel->foto_artikel); ?>" style="object-fit: cover;">
+                    <img class="img-fluid w-100" src="<?= base_url('asset-user/images/' . $artikel->foto_artikel); ?>" style="object-fit: cover;" alt="<?= $artikel->foto_artikel; ?>">
                     <div class="bg-white border border-top-0 p-4">
                         <div class="mb-3">
                             <p class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></p>

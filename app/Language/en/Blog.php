@@ -10,7 +10,7 @@ return [
     'headerActivities' => 'Activities',
     'headerContact' => 'Contact',
     'headerLanguage' => 'Language',
-    'btnReadmore' => 'Read More',
+    'btnReadmore' => 'Continue Reading',
     'btnMoreproducts' => 'Other Service',
     'btnOurproducts' => 'Our Services',
     'btnRecomenprodcuts' => 'Recommended Services',

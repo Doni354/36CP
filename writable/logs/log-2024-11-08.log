@@ -142,3 +142,105 @@ INFO - 2024-11-08 03:05:35 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-08 03:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-08 03:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-08 03:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 03:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-08 03:24:41 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:24:44 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:24:45 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:24:45 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:24:45 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:24:45 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
+CRITICAL - 2024-11-08 03:25:16 --> Undefined variable $row
+in APPPATH\Views\user\artikel\detail.php on line 66.
+ 1 APPPATH\Views\user\artikel\detail.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Project\\Web Company Profile\\36-master\\app\\Views\\user\\artikel\\detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('user/artikel/detail', [], true)
+ 5 APPPATH\Controllers\user\Artikelctrl.php(99): view('user/artikel/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Artikelctrl->detail('eksplorasi-rasa')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Artikelctrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\Web Company Profile\\36-master\\public\\index.php')
